@@ -5,34 +5,38 @@ different projects separate by creating isolated python virtual environments
 for them. This is one of the most important tools that most of the Python
 developers use.
 -----------------------------------------------------------------------------
-## commands:
-
 # install:
 pip install virtualenv
-
+-----------------------------------------------------------------------------
 # create:
 # here myvirtualenv is the name of virtual environment
 python -m venv myvirtualenv
-
+-----------------------------------------------------------------------------
 # we must activate the virtual environment before using
 cd myvirtualenv
 cd Scripts
-# for activate
 activate
-
 # for deactivate
 deactivate
-
+-----------------------------------------------------------------------------
 # if we check the installed list when virtual environment is activated, it just
 shows the default installations
 pip list
-
+-----------------------------------------------------------------------------
 # so we can install any perticular tools for the particular project in this
 virtual environment, which does not effect or effected by the real environment
 of the pc
 pip install django==2.2.4
-
+-----------------------------------------------------------------------------
 # we can add different tools together  by using requirement.txt file into the
 environment & we have to install this as requirement into the environment
 cd ..
 pip install -r requirement.txt
+-----------------------------------------------------------------------------
+# activate shortcut:
+Scripts\activate
+-----------------------------------------------------------------------------
+# creating a new project & a new app under virtual environment:
+django-admin startproject API_PROJECT
+cd API_PROJECT
+python manage.py startapp API_EXAMPLE

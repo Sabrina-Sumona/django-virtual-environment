@@ -1,0 +1,21 @@
+# github public api
+https://github.com/public-apis/public-apis
+https://simpleisbetterthancomplex.com/tutorial/2018/02/03/how-to-use-restful-apis-with-django.html
+-----------------------------------------------------------------------------
+# adding the app into installed apps of setting.py
+# creating templates folder into app & adding the templates into setting.py
+# adding views
+# creating html codes in templates
+# setting urls into urls.py of project folder
+# run server:
+py manage.py runserver
+-----------------------------------------------------------------------------
+# installing requests module:
+pip install requests
+-----------------------------------------------------------------------------
+# creating url to request to the github server:
+url = 'https://api.github.com/users/' + str(username)
+or
+url = 'https://api.github.com/users/%s' % username
+# sending request & accept response
+# then converting the response into json
